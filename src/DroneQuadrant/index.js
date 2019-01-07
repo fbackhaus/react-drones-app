@@ -28,15 +28,11 @@ class DroneQuadrant extends React.Component {
 
     onClickAddHandler() {
         const drone = {
-            x: 230,
-            y: 301,
+            x: 150,
+            y: 150,
             quadrant: 1,
-        }
-        axios.post('http://localhost:4001/api/drones', { drone }, { 'Access-Control-Allow-Origin': '*' })
-        .then(res => {
-          console.log(res);
-          console.log(res.data);
-        })
+        };
+        axios.post('http://localhost:4001/api/drones', drone);
     }
 
     onClickDeleteHandler() {
